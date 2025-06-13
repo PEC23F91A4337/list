@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Array Elements</title>
+</head>
+<body>
+    <h2>Find Sum of Array Elements</h2>
+    <p>Enter numbers separated by commas (e.g., 1,2,3,4):</p>
+    <input type="text" id="arrayInput" placeholder="Enter numbers">
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p><strong>Sum:</strong> <span id="result"></span></p>
+
+    <script>
+        function calculateSum() {
+            var input = document.getElementById("arrayInput").value;
+            var array = input.split(",").map(Number); 
+            var sum = array.reduce((acc, curr) => acc + curr, 0); 
+            document.getElementById("result").textContent = sum;
+        }
+    </script>
+</body>
+</html>
